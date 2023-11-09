@@ -43,14 +43,14 @@ function App() {
   return (
     <div className="flex flex-col items-center container mx-auto gap-5">
       <h1 className="font-bold text-4xl mt-5">Meus pokemons</h1>
-      <div className="flex flex-col justify-center flex-wrap md:flex-row gap-4">
+      <div className="flex flex-row justify-center flex-wrap md:flex-row gap-4">
 
         {pokemonData && pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
 
       </div>
-      <h1 className='text-4xl'>Pagina Atual: {page}</h1>
+      <h1 className='text-4xl'>Pagina Atual: {page + 1}</h1>
       <div className='flex flex-row items-center gap-2'>
         {page <= 0 ? null : (
           <button className='py-4 px-2 text-white text-lg  w-[200px] bg-slate-600'
