@@ -4,7 +4,7 @@ const PokemonCard = ({ pokemon }) => {
     return (
         <div className='flex flex-col items-center bg-slate-200 rounded-2xl'>
             <img
-                src={pokemon.img}
+                src={pokemon.sprites.front_default}
                 alt={pokemon.name}
                 className='max-w-[200px]'
             />
