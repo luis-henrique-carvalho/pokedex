@@ -1,3 +1,117 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  background-color: #DC0A2D;
+}
+
+/* Fogo */
+.fire {
+  color: white;
+  background-color: #ff4500; /* Laranja escuro */
+}
+
+.bg-red{
+  background-color: #DC0A2D;
+}
+
+/* Água */
+.water {
+  color: white;
+  background-color: #0077be; /* Azul-claro */
+}
+
+/* Grama */
+.grass {
+  color: white;
+  background-color: #4caf50; /* Verde */
+}
+
+/* Elétrico */
+.electric {
+  color: black;
+  background-color: #ffd700; /* Amarelo */
+}
+
+/* Gelo */
+.ice {
+  color: black;
+  background-color: #87ceeb; /* Azul-claro */
+}
+
+/* Lutador */
+.fighting {
+  color: white;
+  background-color: #a0522d; /* Marrom */
+}
+
+/* Veneno */
+.poison {
+  color: white;
+  background-color: #800080; /* Roxo */
+}
+
+/* Terra */
+.ground {
+  color: black;
+  background-color: #8b4513; /* Marrom-escuro */
+}
+
+/* Voador */
+.flying {
+  color: black;
+  background-color: #87ceeb; /* Azul-claro */
+}
+
+/* Psíquico */
+.psychic {
+  color: white;
+  background-color: #ff1493; /* Rosa */
+}
+
+.normal {
+  background-color: #a9a9a9; /* Cinza */
+}
+
+/* Inseto */
+.bug {
+  color: black;
+  background-color: #32cd32; /* Verde-claro */
+}
+
+/* Pedra */
+.rock {
+  color: white;
+  background-color: #a9a9a9; /* Cinza */
+}
+
+/* Fantasma */
+.ghost {
+  color: white;
+  background-color: #4b0082; /* Indigo escuro */
+}
+
+/* Aço */
+.steel {
+  color: black;
+  background-color: #a9a9a9; /* Cinza */
+}
+
+/* Dragão */
+.dragon {
+  color: white;
+  background-color: #4169e1; /* Azul */
+}
+
+/* Sombrio */
+.dark {
+  color: white;
+  background-color: #2f4f4f; /* Cinza-escuro */
+}
+
+/* Fada */
+.fairy {
+  color: black;
+  background-color: #ee82ee; /* Violeta */
+}
