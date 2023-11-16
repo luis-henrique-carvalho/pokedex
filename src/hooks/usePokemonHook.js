@@ -1,18 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 const usePokemonHook = () => {
   const [page, setPage] = useState(0);
   const [pokemonData, setPokemonData] = useState([]); // [1,2,3,4,5,6,7,8,9,10
-  const [pokemon, setPokemon] = useState()
-  const { id } = useParams()
-
+ 
   const getPokemonById = async (id) => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const data = await response.json()
-    setPokemon(data)
+    return data
+  }
+
+  const searchPokemon = async (name) => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    const data = await response.json()
+    return data
   }
 
   const fetchPokemonsList = async () => {
@@ -48,11 +51,7 @@ const usePokemonHook = () => {
     fetchPokemonData()
   }, [page])
 
-  useEffect(() => {
-    getPokemonById(id)
-  }, [id])
-
-  return { page, setPage, pokemonData, pokemon }
+  return { page, setPage, pokemonData, getPokemonById, searchPokemon }
 
 }
 

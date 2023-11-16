@@ -1,15 +1,32 @@
-import React from 'react'
-import PokemonCard from '../components/PokemonCard'
+import React, { useEffect, useState } from 'react'
 import usePokemonHook from '../hooks/usePokemonHook'
+import { useParams } from 'react-router-dom'
+import PokemonCardFull from '../components/PokemonCardFull'
 
 const PokemonPage = () => {
-  const { pokemon } = usePokemonHook()
+  const { id } = useParams()
+  const [pokemon, setPokemon] = useState(null)
+  const { getPokemonById } = usePokemonHook()
+
+  const getPokemon = async () => {
+    try {
+      const response = await getPokemonById(id)
+      setPokemon(response)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getPokemon()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id])
 
   return (
     <>
-      {pokemon && <div>
-        <PokemonCard pokemon={pokemon} />
-      </div>}
+      {pokemon &&
+        <PokemonCardFull pokemon={pokemon} />
+      }
     </>
   )
 }

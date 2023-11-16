@@ -1,17 +1,18 @@
 import React from 'react'
 import PokemonCard from '../components/PokemonCard'
 import usePokemonHook from '../hooks/usePokemonHook'
+import Container from '../components/Container'
 
 
 const Home = () => {
   const { page, pokemonData, setPage } = usePokemonHook()
 
   return (
-    <div className='flex flex-col container p-5 rounded-xl items-center gap-5 bg-slate-50 '>
+    <Container>
       <h1 className="font-bold text-4xl mt-5">Meus pokemons</h1>
       <div className="flex flex-row justify-center flex-wrap md:flex-row gap-4 ">
 
-        {pokemonData.map((pokemon) => (
+        {pokemonData && pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
 
@@ -30,7 +31,7 @@ const Home = () => {
         >Proxima pagina
         </button>
       </div>
-    </div>
+    </Container >
 
   )
 }
